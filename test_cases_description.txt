@@ -1,0 +1,30 @@
+Test Case 1: Add Products to Cart
+Steps:
+1. Open browser and navigate to site
+2. Log in
+3. Add products to cart (skip if not found)
+4. Log out
+5. Close browser
+
+Test Case 2: Buy Products from list (in variables file)
+Steps:
+1. Open browser and navigate to site
+2. Log in
+3. Add products to cart (skip if not found)
+4. If every product in a cart, purchase
+5. Close browser
+
+Test Case 3: Add Products and Clear Cart if Missing
+Steps:
+1. Open browser and navigate to site
+2. Log in
+3. Add products to cart (skip if not found)
+4. If not every product in a cart, clear cart
+5. Close browser
+
+Test Case 4: Login and Logout from website
+Steps:
+1. Open browser and navigate to site
+2. Log in
+3. Log out
+4. Close browser
