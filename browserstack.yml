@@ -1,24 +1,28 @@
 userName: kuralovmadiyar_Bdb6h1
 accessKey: uSbtjRXNznvKTpbxXzxh
+
 platforms:
   - os: Windows
     osVersion: 11
     browserName: Chrome
     browserVersion: latest
+
   - os: Windows
     osVersion: 11
     browserName: Firefox
     browserVersion: latest
+
   - os: OS X
     osVersion: Sonoma
     browserName: Safari
-    browserVersion: 17.3
+    browserVersion: latest
+
 parallelsPerPlatform: 1
-browserstackLocal: true
-buildName: bstack-demo
-projectName: BrowserStack Sample
-CUSTOM_TAG_1: "You can set a custom Build Tag here"
-# Use CUSTOM_TAG_<N> and set more build tags as you need.
-networkLogs: true
-consoleLogs: info
+browserstackLocal: false
+
+buildName: Robot Tests Build
+projectName: Robot Framework Tests
+
 framework: robot
+consoleLogs: info
+networkLogs: true
