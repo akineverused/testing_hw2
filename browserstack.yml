@@ -5,7 +5,7 @@ platforms:
   - os: Windows
     osVersion: 11
     browserName: Chrome
-    browserVersion: latest
+    browserVersion: 115
 
   - os: Windows
     osVersion: 11
