@@ -22,6 +22,7 @@ browserstackLocal: false
 
 buildName: Robot Tests Build
 projectName: Robot Framework Tests
+
 framework: robot
 consoleLogs: info
 networkLogs: true

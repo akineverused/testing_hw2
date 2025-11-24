@@ -1,0 +1,231 @@
+<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-11-24T13:54:20.839877" rpa="false" schemaversion="5">
+<statistics>
+<total>
+<stat pass="1" fail="0" skip="0">All Tests</stat>
+</total>
+<tag>
+</tag>
+<suite>
+<stat name="testCases" id="s1" pass="1" fail="0" skip="0">testCases</stat>
+<stat name="AddProducts" id="s1-s1" pass="1" fail="0" skip="0">testCases.AddProducts</stat>
+</suite>
+</statistics>
+<suite name="Suites" id="s0"><suite id="s1-s1" name="AddProducts Windows, 11, Chrome, 115" source="C:\Users\Acer\PycharmProjects\Testing\Assignment_2\testCases\AddProducts.robot">
+<test id="s1-s1-t1" name="Add Selected Products To Cart" line="6">
+<kw name="Open Browser To SauceDemo" owner="keywords">
+<kw name="Open Browser" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:20.917410" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-11-24T13:54:20.998174" level="WARN">The chromedriver version (141.0.7390.78) detected in PATH at C:\Users\Acer\PycharmProjects\Testing\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (142.0.7444.176); currently, chromedriver 142.0.7444.175 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+<msg time="2025-11-24T13:54:21.001653" level="INFO">Completed setup!</msg>
+<arg>${BASE_URL}</arg>
+<arg>${BROWSER}</arg>
+<doc>Opens a new browser instance to the optional ``url``.</doc>
+<status status="PASS" start="2025-11-24T13:54:20.916803" elapsed="8.033519" />
+</kw>
+<kw name="Maximize Browser Window" owner="SeleniumLibrary">
+<doc>Maximizes current browser window.</doc>
+<status status="PASS" start="2025-11-24T13:54:28.951604" elapsed="0.469352" />
+</kw>
+<status status="PASS" start="2025-11-24T13:54:20.915658" elapsed="8.506398" />
+</kw>
+<kw name="Login" owner="keywords">
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:29.423822" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[@id="user-name"]'.</msg>
+<arg>xpath=//input[@id="user-name"]</arg>
+<arg>${USERNAME}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:29.423166" elapsed="0.792438" />
+</kw>
+<kw name="Input Text" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:30.217317" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//input[@id="password"]'.</msg>
+<arg>xpath=//input[@id="password"]</arg>
+<arg>${PASSWORD}</arg>
+<doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:30.216775" elapsed="1.071550" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:31.290018" level="INFO">Clicking element 'xpath=//input[@id="login-button"]'.</msg>
+<arg>xpath=//input[@id="login-button"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:31.289515" elapsed="0.701406" />
+</kw>
+<status status="PASS" start="2025-11-24T13:54:29.422588" elapsed="2.569431" />
+</kw>
+<kw name="Add Products To Cart" owner="keywords">
+<for flavor="IN">
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:32.359005" level="INFO">Element 'xpath=//div[text()="Sauce Labs Backpack"]' is displayed.</msg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-24T13:54:31.994510" elapsed="0.365211" />
+</kw>
+<msg time="2025-11-24T13:54:32.360810" level="INFO">${product_present} = True</msg>
+<var>${product_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-24T13:54:31.994059" elapsed="0.367401" />
+</kw>
+<if>
+<branch type="IF" condition="${product_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:32.363455" level="INFO">Clicking element 'xpath=//div[text()="Sauce Labs Backpack"]'.</msg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:32.362944" elapsed="0.390419" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:32.755034" level="INFO">Clicking element 'id=add-to-cart'.</msg>
+<arg>id=add-to-cart</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:32.754518" elapsed="0.508377" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:33.264483" level="INFO">Clicking element 'id=back-to-products'.</msg>
+<arg>id=back-to-products</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:33.263996" elapsed="0.527789" />
+</kw>
+<status status="PASS" start="2025-11-24T13:54:32.362509" elapsed="1.430626" />
+</branch>
+<status status="PASS" start="2025-11-24T13:54:32.362476" elapsed="1.431630" />
+</if>
+<var name="${product}">Sauce Labs Backpack</var>
+<status status="PASS" start="2025-11-24T13:54:31.993676" elapsed="1.800467" />
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:34.264802" level="INFO">Element 'xpath=//div[text()="Sauce Labs Bike Light"]' is displayed.</msg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-24T13:54:33.796058" elapsed="0.469495" />
+</kw>
+<msg time="2025-11-24T13:54:34.266678" level="INFO">${product_present} = True</msg>
+<var>${product_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-24T13:54:33.795600" elapsed="0.471750" />
+</kw>
+<if>
+<branch type="IF" condition="${product_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:34.269416" level="INFO">Clicking element 'xpath=//div[text()="Sauce Labs Bike Light"]'.</msg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:34.268892" elapsed="0.480741" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:34.751291" level="INFO">Clicking element 'id=add-to-cart'.</msg>
+<arg>id=add-to-cart</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:34.750792" elapsed="0.346271" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:35.098871" level="INFO">Clicking element 'id=back-to-products'.</msg>
+<arg>id=back-to-products</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:35.098369" elapsed="0.417541" />
+</kw>
+<status status="PASS" start="2025-11-24T13:54:34.268440" elapsed="1.248768" />
+</branch>
+<status status="PASS" start="2025-11-24T13:54:34.268411" elapsed="1.249765" />
+</if>
+<var name="${product}">Sauce Labs Bike Light</var>
+<status status="PASS" start="2025-11-24T13:54:33.795212" elapsed="1.722994" />
+</iter>
+<iter>
+<kw name="Run Keyword And Return Status" owner="BuiltIn">
+<kw name="Element Should Be Visible" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:35.808731" level="INFO">Element 'xpath=//div[text()="Sauce Labs Bolt T-Shirt"]' is displayed.</msg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Verifies that the element identified by ``locator`` is visible.</doc>
+<status status="PASS" start="2025-11-24T13:54:35.520075" elapsed="0.289380" />
+</kw>
+<msg time="2025-11-24T13:54:35.810536" level="INFO">${product_present} = True</msg>
+<var>${product_present}</var>
+<arg>Element Should Be Visible</arg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
+<status status="PASS" start="2025-11-24T13:54:35.519636" elapsed="0.291536" />
+</kw>
+<if>
+<branch type="IF" condition="${product_present}">
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:35.813306" level="INFO">Clicking element 'xpath=//div[text()="Sauce Labs Bolt T-Shirt"]'.</msg>
+<arg>xpath=//div[text()="${product}"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:35.812806" elapsed="0.471629" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:36.286076" level="INFO">Clicking element 'id=add-to-cart'.</msg>
+<arg>id=add-to-cart</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:36.285575" elapsed="0.400463" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:36.687813" level="INFO">Clicking element 'id=back-to-products'.</msg>
+<arg>id=back-to-products</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:36.687295" elapsed="0.405663" />
+</kw>
+<status status="PASS" start="2025-11-24T13:54:35.812370" elapsed="1.281698" />
+</branch>
+<status status="PASS" start="2025-11-24T13:54:35.812343" elapsed="1.282741" />
+</if>
+<var name="${product}">Sauce Labs Bolt T-Shirt</var>
+<status status="PASS" start="2025-11-24T13:54:35.519253" elapsed="1.575861" />
+</iter>
+<var>${product}</var>
+<value>@{products}</value>
+<status status="PASS" start="2025-11-24T13:54:31.993219" elapsed="5.103031" />
+</for>
+<kw name="Log" owner="BuiltIn">
+<msg time="2025-11-24T13:54:37.097804" level="INFO">Added all selected products to cart</msg>
+<arg>Added all selected products to cart</arg>
+<doc>Logs the given message with the given level.</doc>
+<status status="PASS" start="2025-11-24T13:54:37.097350" elapsed="0.001176" />
+</kw>
+<arg>@{PRODUCTS}</arg>
+<status status="PASS" start="2025-11-24T13:54:31.992614" elapsed="5.106971" />
+</kw>
+<kw name="Logout" owner="keywords">
+<kw name="Click Button" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:37.101112" level="INFO">Clicking button 'xpath=//button[@id="react-burger-menu-btn"]'.</msg>
+<arg>xpath=//button[@id="react-burger-menu-btn"]</arg>
+<doc>Clicks the button identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:37.100647" elapsed="0.868882" />
+</kw>
+<kw name="Sleep" owner="BuiltIn">
+<msg time="2025-11-24T13:54:38.971910" level="INFO">Slept 1 second.</msg>
+<arg>1s</arg>
+<doc>Pauses the test executed for the given time.</doc>
+<status status="PASS" start="2025-11-24T13:54:37.971068" elapsed="1.001618" />
+</kw>
+<kw name="Click Element" owner="SeleniumLibrary">
+<msg time="2025-11-24T13:54:38.974252" level="INFO">Clicking element 'xpath=//a[text()="Logout"]'.</msg>
+<arg>xpath=//a[text()="Logout"]</arg>
+<doc>Click the element identified by ``locator``.</doc>
+<status status="PASS" start="2025-11-24T13:54:38.973771" elapsed="0.511434" />
+</kw>
+<status status="PASS" start="2025-11-24T13:54:37.100088" elapsed="2.386879" />
+</kw>
+<kw name="Close Browser" owner="keywords">
+<kw name="Close All Browsers" owner="SeleniumLibrary">
+<doc>Closes all open browsers and resets the browser cache.</doc>
+<status status="PASS" start="2025-11-24T13:54:39.488295" elapsed="1.087366" />
+</kw>
+<status status="PASS" start="2025-11-24T13:54:39.487723" elapsed="1.089001" />
+</kw>
+<status status="PASS" start="2025-11-24T13:54:20.913462" elapsed="19.663784" />
+</test>
+<status status="PASS" start="2025-11-24T13:54:20.867338" elapsed="19.710867" />
+</suite>
+<status status="PASS" start="2025-11-24T13:54:20.867338" elapsed="19.710867" />
+</suite><errors>
+<msg time="2025-11-24T13:54:20.998174" level="WARN">The chromedriver version (141.0.7390.78) detected in PATH at C:\Users\Acer\PycharmProjects\Testing\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (142.0.7444.176); currently, chromedriver 142.0.7444.175 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
+</errors>
+</robot>

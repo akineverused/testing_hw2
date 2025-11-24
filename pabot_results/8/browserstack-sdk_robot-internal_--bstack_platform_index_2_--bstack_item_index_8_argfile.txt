@@ -1,0 +1,18 @@
+--suite testCases.ClearCart
+--variable BSTACKDEFLOCALIDENTIFIER:
+--variable BSTACKPLATFORMINDEX:2
+--variable CALLER_ID:05078ef801204964aa79ffbe5805ef5b
+--variable PABOTLIBURI:127.0.0.1:8270
+--variable PABOTEXECUTIONPOOLID:2
+--variable PABOTISLASTEXECUTIONINPOOL:0
+--variable PABOTNUMBEROFPROCESSES:3
+--variable PABOTQUEUEINDEX:8
+--variable PABOTLASTLEVEL:testCases.ClearCart
+--listener C:\Users\Acer\PycharmProjects\Testing\Assignment_2\.venv\Lib\site-packages\browserstack_sdk\bstack_robot_listener.py
+--log NONE
+--report NONE
+--xunit NONE
+--outputdir .\pabot_results\8
+--consolecolors off
+--consolemarkers off
+testCases/
