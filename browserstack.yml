@@ -5,7 +5,7 @@ platforms:
   - os: Windows
     osVersion: 11
     browserName: Chrome
-    browserVersion: latest
+    browserVersion: 115
 
   - os: Windows
     osVersion: 11
@@ -22,7 +22,6 @@ browserstackLocal: false
 
 buildName: Robot Tests Build
 projectName: Robot Framework Tests
-
 framework: robot
 consoleLogs: info
 networkLogs: true

@@ -1,6 +1,6 @@
 *** Variables ***
 ${BASE_URL}      https://www.saucedemo.com/
-${BROWSER}       ${EMPTY}
+${BROWSER}       Chrome
 
 ${USERNAME}      standard_user
 ${PASSWORD}      secret_sauce
