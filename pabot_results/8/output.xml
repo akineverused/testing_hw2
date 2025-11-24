@@ -1,4 +1,4 @@
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-11-24T13:55:28.394044" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.0 on win32)" generated="2025-11-24T14:14:20.921824" rpa="false" schemaversion="5">
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
@@ -14,319 +14,317 @@
 <test id="s1-s1-t1" name="Clear Cart If Not Enough Products" line="5">
 <kw name="Open Browser To SauceDemo" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:28.456254" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<msg time="2025-11-24T13:55:28.525986" level="WARN">The chromedriver version (141.0.7390.78) detected in PATH at C:\Users\Acer\PycharmProjects\Testing\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (142.0.7444.176); currently, chromedriver 142.0.7444.175 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2025-11-24T13:55:28.528966" level="INFO">Completed setup!</msg>
+<msg time="2025-11-24T14:14:21.045971" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-11-24T14:14:21.108715" level="INFO">Completed setup!</msg>
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T13:55:28.455667" elapsed="12.740485" />
+<status status="PASS" start="2025-11-24T14:14:21.044968" elapsed="13.758449" />
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-24T13:55:41.197478" elapsed="0.133490" />
+<status status="PASS" start="2025-11-24T14:14:34.805372" elapsed="0.145325" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:28.454509" elapsed="12.877575" />
+<status status="PASS" start="2025-11-24T14:14:21.043926" elapsed="13.907781" />
 </kw>
 <kw name="Login" owner="keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:41.333865" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[@id="user-name"]'.</msg>
+<msg time="2025-11-24T14:14:34.953702" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[@id="user-name"]'.</msg>
 <arg>xpath=//input[@id="user-name"]</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:41.333206" elapsed="0.382307" />
+<status status="PASS" start="2025-11-24T14:14:34.952702" elapsed="0.419685" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:41.717220" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//input[@id="password"]'.</msg>
+<msg time="2025-11-24T14:14:35.374396" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//input[@id="password"]'.</msg>
 <arg>xpath=//input[@id="password"]</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:41.716677" elapsed="0.411378" />
+<status status="PASS" start="2025-11-24T14:14:35.373397" elapsed="0.480149" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:42.129767" level="INFO">Clicking element 'xpath=//input[@id="login-button"]'.</msg>
+<msg time="2025-11-24T14:14:35.856556" level="INFO">Clicking element 'xpath=//input[@id="login-button"]'.</msg>
 <arg>xpath=//input[@id="login-button"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:42.129270" elapsed="0.263753" />
+<status status="PASS" start="2025-11-24T14:14:35.855576" elapsed="0.271806" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:41.332625" elapsed="1.061969" />
+<status status="PASS" start="2025-11-24T14:14:34.952702" elapsed="1.176688" />
 </kw>
 <kw name="Add Products To Cart" owner="keywords">
 <for flavor="IN">
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:42.647953" level="INFO">Element 'xpath=//div[text()="Sauce Labs Backpack"]' is displayed.</msg>
+<msg time="2025-11-24T14:14:36.390569" level="INFO">Element 'xpath=//div[text()="Sauce Labs Backpack"]' is displayed.</msg>
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-24T13:55:42.397282" elapsed="0.251483" />
+<status status="PASS" start="2025-11-24T14:14:36.133385" elapsed="0.258227" />
 </kw>
-<msg time="2025-11-24T13:55:42.649985" level="INFO">${product_present} = True</msg>
+<msg time="2025-11-24T14:14:36.392611" level="INFO">${product_present} = True</msg>
 <var>${product_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-11-24T13:55:42.396834" elapsed="0.253862" />
+<status status="PASS" start="2025-11-24T14:14:36.132383" elapsed="0.260228" />
 </kw>
 <if>
 <branch type="IF" condition="${product_present}">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:42.652929" level="INFO">Clicking element 'xpath=//div[text()="Sauce Labs Backpack"]'.</msg>
+<msg time="2025-11-24T14:14:36.394611" level="INFO">Clicking element 'xpath=//div[text()="Sauce Labs Backpack"]'.</msg>
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:42.652376" elapsed="0.259001" />
+<status status="PASS" start="2025-11-24T14:14:36.394611" elapsed="0.405320" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:42.913025" level="INFO">Clicking element 'id=add-to-cart'.</msg>
+<msg time="2025-11-24T14:14:36.801948" level="INFO">Clicking element 'id=add-to-cart'.</msg>
 <arg>id=add-to-cart</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:42.912540" elapsed="0.245772" />
+<status status="PASS" start="2025-11-24T14:14:36.800941" elapsed="0.277568" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:43.159914" level="INFO">Clicking element 'id=back-to-products'.</msg>
+<msg time="2025-11-24T14:14:37.080542" level="INFO">Clicking element 'id=back-to-products'.</msg>
 <arg>id=back-to-products</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:43.159432" elapsed="0.270414" />
+<status status="PASS" start="2025-11-24T14:14:37.080542" elapsed="0.327674" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:42.651900" elapsed="0.779010" />
+<status status="PASS" start="2025-11-24T14:14:36.393614" elapsed="1.016442" />
 </branch>
-<status status="PASS" start="2025-11-24T13:55:42.651861" elapsed="0.780059" />
+<status status="PASS" start="2025-11-24T14:14:36.393614" elapsed="1.017444" />
 </if>
 <var name="${product}">Sauce Labs Backpack</var>
-<status status="PASS" start="2025-11-24T13:55:42.396366" elapsed="1.035590" />
+<status status="PASS" start="2025-11-24T14:14:36.131386" elapsed="1.279672" />
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:43.673614" level="INFO">Element 'xpath=//div[text()="Sauce Labs Bike Light"]' is displayed.</msg>
+<msg time="2025-11-24T14:14:37.680236" level="INFO">Element 'xpath=//div[text()="Sauce Labs Bike Light"]' is displayed.</msg>
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-24T13:55:43.433877" elapsed="0.240469" />
+<status status="PASS" start="2025-11-24T14:14:37.413054" elapsed="0.267182" />
 </kw>
-<msg time="2025-11-24T13:55:43.675490" level="INFO">${product_present} = True</msg>
+<msg time="2025-11-24T14:14:37.682236" level="INFO">${product_present} = True</msg>
 <var>${product_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-11-24T13:55:43.433420" elapsed="0.242770" />
+<status status="PASS" start="2025-11-24T14:14:37.412055" elapsed="0.270181" />
 </kw>
 <if>
 <branch type="IF" condition="${product_present}">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:43.678264" level="INFO">Clicking element 'xpath=//div[text()="Sauce Labs Bike Light"]'.</msg>
+<msg time="2025-11-24T14:14:37.684237" level="INFO">Clicking element 'xpath=//div[text()="Sauce Labs Bike Light"]'.</msg>
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:43.677743" elapsed="0.256216" />
+<status status="PASS" start="2025-11-24T14:14:37.684237" elapsed="0.280950" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:43.935573" level="INFO">Clicking element 'id=add-to-cart'.</msg>
+<msg time="2025-11-24T14:14:37.967187" level="INFO">Clicking element 'id=add-to-cart'.</msg>
 <arg>id=add-to-cart</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:43.935079" elapsed="0.245843" />
+<status status="PASS" start="2025-11-24T14:14:37.967187" elapsed="0.277947" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:44.182696" level="INFO">Clicking element 'id=back-to-products'.</msg>
+<msg time="2025-11-24T14:14:38.247134" level="INFO">Clicking element 'id=back-to-products'.</msg>
 <arg>id=back-to-products</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:44.182196" elapsed="0.259657" />
+<status status="PASS" start="2025-11-24T14:14:38.247134" elapsed="0.277500" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:43.677299" elapsed="0.765789" />
+<status status="PASS" start="2025-11-24T14:14:37.683237" elapsed="0.842940" />
 </branch>
-<status status="PASS" start="2025-11-24T13:55:43.677271" elapsed="0.766744" />
+<status status="PASS" start="2025-11-24T14:14:37.683237" elapsed="0.844957" />
 </if>
 <var name="${product}">Sauce Labs Bike Light</var>
-<status status="PASS" start="2025-11-24T13:55:43.433020" elapsed="1.011029" />
+<status status="PASS" start="2025-11-24T14:14:37.412055" elapsed="1.116139" />
 </iter>
 <iter>
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:47.307182" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
-<msg time="2025-11-24T13:55:47.307426" level="FAIL">Element with locator 'xpath=//div[text()="Sauce Labs Bolt Shirt"]' not found.</msg>
+<msg time="2025-11-24T14:14:42.124139" level="INFO" html="true">&lt;/td&gt;&lt;/tr&gt;&lt;tr&gt;&lt;td colspan="3"&gt;&lt;a href="selenium-screenshot-1.png"&gt;&lt;img src="selenium-screenshot-1.png" width="800px"&gt;&lt;/a&gt;</msg>
+<msg time="2025-11-24T14:14:42.125140" level="FAIL">Element with locator 'xpath=//div[text()="Sauce Labs Bolt Shirt"]' not found.</msg>
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="FAIL" start="2025-11-24T13:55:44.445908" elapsed="2.864287">Element with locator 'xpath=//div[text()="Sauce Labs Bolt Shirt"]' not found.</status>
+<status status="FAIL" start="2025-11-24T14:14:38.532219" elapsed="3.594920">Element with locator 'xpath=//div[text()="Sauce Labs Bolt Shirt"]' not found.</status>
 </kw>
-<msg time="2025-11-24T13:55:47.311405" level="INFO">${product_present} = False</msg>
+<msg time="2025-11-24T14:14:42.128139" level="INFO">${product_present} = False</msg>
 <var>${product_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-11-24T13:55:44.445465" elapsed="2.866616" />
+<status status="PASS" start="2025-11-24T14:14:38.531221" elapsed="3.596918" />
 </kw>
 <if>
 <branch type="IF" condition="${product_present}">
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>xpath=//div[text()="${product}"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T13:55:47.313570" elapsed="0.000337" />
+<status status="NOT RUN" start="2025-11-24T14:14:42.130138" elapsed="0.000000" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>id=add-to-cart</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T13:55:47.314926" elapsed="0.000415" />
+<status status="NOT RUN" start="2025-11-24T14:14:42.132104" elapsed="0.000000" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
 <arg>id=back-to-products</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="NOT RUN" start="2025-11-24T13:55:47.316337" elapsed="0.000347" />
+<status status="NOT RUN" start="2025-11-24T14:14:42.134143" elapsed="0.000000" />
 </kw>
-<status status="NOT RUN" start="2025-11-24T13:55:47.313145" elapsed="0.004482" />
+<status status="NOT RUN" start="2025-11-24T14:14:42.130138" elapsed="0.005001" />
 </branch>
-<status status="PASS" start="2025-11-24T13:55:47.313121" elapsed="0.005429" />
+<status status="PASS" start="2025-11-24T14:14:42.130138" elapsed="0.006000" />
 </if>
 <var name="${product}">Sauce Labs Bolt Shirt</var>
-<status status="PASS" start="2025-11-24T13:55:44.445077" elapsed="2.873503" />
+<status status="PASS" start="2025-11-24T14:14:38.531221" elapsed="3.604917" />
 </iter>
 <var>${product}</var>
 <value>@{products}</value>
-<status status="PASS" start="2025-11-24T13:55:42.395900" elapsed="4.923613" />
+<status status="PASS" start="2025-11-24T14:14:36.131386" elapsed="6.005295" />
 </for>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-24T13:55:47.321259" level="INFO">Added all selected products to cart</msg>
+<msg time="2025-11-24T14:14:42.138723" level="INFO">Added all selected products to cart</msg>
 <arg>Added all selected products to cart</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-24T13:55:47.320645" elapsed="0.001382" />
+<status status="PASS" start="2025-11-24T14:14:42.138723" elapsed="0.000966" />
 </kw>
 <arg>@{PRODUCTS_2}</arg>
-<status status="PASS" start="2025-11-24T13:55:42.395268" elapsed="4.927846" />
+<status status="PASS" start="2025-11-24T14:14:36.130384" elapsed="6.010340" />
 </kw>
 <kw name="Check And Act" owner="keywords">
 <kw name="Run Keyword And Return Status" owner="BuiltIn">
 <kw name="Element Should Be Visible" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:47.578695" level="INFO">Element 'xpath=//span[@data-test="shopping-cart-badge"]' is displayed.</msg>
+<msg time="2025-11-24T14:14:42.399329" level="INFO">Element 'xpath=//span[@data-test="shopping-cart-badge"]' is displayed.</msg>
 <arg>xpath=//span[@data-test="shopping-cart-badge"]</arg>
 <doc>Verifies that the element identified by ``locator`` is visible.</doc>
-<status status="PASS" start="2025-11-24T13:55:47.324816" elapsed="0.254603" />
+<status status="PASS" start="2025-11-24T14:14:42.142723" elapsed="0.257601" />
 </kw>
-<msg time="2025-11-24T13:55:47.580495" level="INFO">${cart_badge_present} = True</msg>
+<msg time="2025-11-24T14:14:42.401318" level="INFO">${cart_badge_present} = True</msg>
 <var>${cart_badge_present}</var>
 <arg>Element Should Be Visible</arg>
 <arg>xpath=//span[@data-test="shopping-cart-badge"]</arg>
 <doc>Runs the given keyword with given arguments and returns the status as a Boolean value.</doc>
-<status status="PASS" start="2025-11-24T13:55:47.324318" elapsed="0.256862" />
+<status status="PASS" start="2025-11-24T14:14:42.141725" elapsed="0.260633" />
 </kw>
 <kw name="Set Variable" owner="BuiltIn">
-<msg time="2025-11-24T13:55:47.582778" level="INFO">${ITEM_COUNT} = 0</msg>
+<msg time="2025-11-24T14:14:42.404359" level="INFO">${ITEM_COUNT} = 0</msg>
 <var>${ITEM_COUNT}</var>
 <arg>0</arg>
 <doc>Returns the given values which can then be assigned to a variables.</doc>
-<status status="PASS" start="2025-11-24T13:55:47.582304" elapsed="0.001122" />
+<status status="PASS" start="2025-11-24T14:14:42.403360" elapsed="0.000999" />
 </kw>
 <if>
 <branch type="IF" condition="${cart_badge_present}">
 <kw name="Get Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:47.858301" level="INFO">${ITEM_COUNT} = 2</msg>
+<msg time="2025-11-24T14:14:42.657585" level="INFO">${ITEM_COUNT} = 2</msg>
 <var>${ITEM_COUNT}</var>
 <arg>xpath=//span[@data-test="shopping-cart-badge"]</arg>
 <doc>Returns the text value of the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:47.584837" elapsed="0.274167" />
+<status status="PASS" start="2025-11-24T14:14:42.406325" elapsed="0.253257" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:47.584450" elapsed="0.275568" />
+<status status="PASS" start="2025-11-24T14:14:42.406325" elapsed="0.254257" />
 </branch>
-<status status="PASS" start="2025-11-24T13:55:47.584428" elapsed="0.276535" />
+<status status="PASS" start="2025-11-24T14:14:42.406325" elapsed="0.256257" />
 </if>
 <kw name="Convert To Integer" owner="BuiltIn">
-<msg time="2025-11-24T13:55:47.861581" level="INFO">${ITEM_COUNT} = 2</msg>
+<msg time="2025-11-24T14:14:42.663582" level="INFO">${ITEM_COUNT} = 2</msg>
 <var>${ITEM_COUNT}</var>
 <arg>${ITEM_COUNT}</arg>
 <doc>Converts the given item to an integer number.</doc>
-<status status="PASS" start="2025-11-24T13:55:47.861071" elapsed="0.001172" />
+<status status="PASS" start="2025-11-24T14:14:42.662582" elapsed="0.002000" />
 </kw>
 <kw name="Get Length" owner="BuiltIn">
-<msg time="2025-11-24T13:55:47.863687" level="INFO">Length is 3.</msg>
-<msg time="2025-11-24T13:55:47.864404" level="INFO">${PLANNED_COUNT} = 3</msg>
+<msg time="2025-11-24T14:14:42.667584" level="INFO">Length is 3.</msg>
+<msg time="2025-11-24T14:14:42.669582" level="INFO">${PLANNED_COUNT} = 3</msg>
 <var>${PLANNED_COUNT}</var>
 <arg>${products}</arg>
 <doc>Returns and logs the length of the given item as an integer.</doc>
-<status status="PASS" start="2025-11-24T13:55:47.863275" elapsed="0.001767" />
+<status status="PASS" start="2025-11-24T14:14:42.666585" elapsed="0.003997" />
 </kw>
 <if>
 <branch type="IF" condition="${ITEM_COUNT} == ${PLANNED_COUNT}">
 <kw name="Buy Products" owner="keywords">
-<status status="NOT RUN" start="2025-11-24T13:55:47.866547" elapsed="0.000309" />
+<status status="NOT RUN" start="2025-11-24T14:14:42.673585" elapsed="0.000000" />
 </kw>
-<status status="NOT RUN" start="2025-11-24T13:55:47.866066" elapsed="0.001688" />
+<status status="NOT RUN" start="2025-11-24T14:14:42.672584" elapsed="0.002997" />
 </branch>
 <branch type="ELSE">
 <kw name="Clear Cart" owner="keywords">
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:47.870761" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
+<msg time="2025-11-24T14:14:42.678581" level="INFO">Clicking element 'id=shopping_cart_container'.</msg>
 <arg>id=shopping_cart_container</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:47.870127" elapsed="0.310751" />
+<status status="PASS" start="2025-11-24T14:14:42.678581" elapsed="0.279175" />
 </kw>
 <kw name="Get WebElements" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:48.305583" level="INFO">${remove_buttons} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="8808d9661f12b39a0e87858da4f76354f785ac4c", element="node-C978231E-30B8-4F29-A7EA-A34D5FAC4117")&gt;, &lt;selenium.webdriver.remote.webelement.WebE...</msg>
+<msg time="2025-11-24T14:14:43.101989" level="INFO">${remove_buttons} = [&lt;selenium.webdriver.remote.webelement.WebElement (session="251f395daf3d17f46b881b373a595f45f73984f2", element="node-B37687B6-E3B2-467B-ADC9-CD889FD96C69")&gt;, &lt;selenium.webdriver.remote.webelement.WebE...</msg>
 <var>${remove_buttons}</var>
 <arg>xpath=//button[contains(@id, "remove")]</arg>
 <doc>Returns a list of WebElement objects matching the ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:48.182016" elapsed="0.124271" />
+<status status="PASS" start="2025-11-24T14:14:42.958767" elapsed="0.144233" />
 </kw>
 <for flavor="IN">
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:48.308635" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8808d9661f12b39a0e87858da4f76354f785ac4c", element="node-C978231E-30B8-4F29-A7EA-A34D5FAC4117")&gt;'.</msg>
+<msg time="2025-11-24T14:14:43.105998" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="251f395daf3d17f46b881b373a595f45f73984f2", element="node-B37687B6-E3B2-467B-ADC9-CD889FD96C69")&gt;'.</msg>
 <arg>${btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:48.308158" elapsed="0.134898" />
+<status status="PASS" start="2025-11-24T14:14:43.104997" elapsed="0.203028" />
 </kw>
-<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8808d9661f12b39a0e87858da4f76354f785ac4c", element="node-C978231E-30B8-4F29-A7EA-A34D5FAC4117")&gt;</var>
-<status status="PASS" start="2025-11-24T13:55:48.307793" elapsed="0.136416" />
+<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="251f395daf3d17f46b881b373a595f45f73984f2", element="node-B37687B6-E3B2-467B-ADC9-CD889FD96C69")&gt;</var>
+<status status="PASS" start="2025-11-24T14:14:43.103994" elapsed="0.206038" />
 </iter>
 <iter>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:48.446180" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="8808d9661f12b39a0e87858da4f76354f785ac4c", element="node-2DB5A7E0-2060-454F-8778-923180B7792C")&gt;'.</msg>
+<msg time="2025-11-24T14:14:43.313030" level="INFO">Clicking element '&lt;selenium.webdriver.remote.webelement.WebElement (session="251f395daf3d17f46b881b373a595f45f73984f2", element="node-A17042B6-34BF-4737-9084-647A7EA53255")&gt;'.</msg>
 <arg>${btn}</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:48.445631" elapsed="0.206635" />
+<status status="PASS" start="2025-11-24T14:14:43.312035" elapsed="0.145838" />
 </kw>
-<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="8808d9661f12b39a0e87858da4f76354f785ac4c", element="node-2DB5A7E0-2060-454F-8778-923180B7792C")&gt;</var>
-<status status="PASS" start="2025-11-24T13:55:48.445255" elapsed="0.208072" />
+<var name="${btn}">&lt;selenium.webdriver.remote.webelement.WebElement (session="251f395daf3d17f46b881b373a595f45f73984f2", element="node-A17042B6-34BF-4737-9084-647A7EA53255")&gt;</var>
+<status status="PASS" start="2025-11-24T14:14:43.312035" elapsed="0.147356" />
 </iter>
 <var>${btn}</var>
 <value>@{remove_buttons}</value>
-<status status="PASS" start="2025-11-24T13:55:48.307349" elapsed="0.346949" />
+<status status="PASS" start="2025-11-24T14:14:43.103994" elapsed="0.355397" />
 </for>
 <kw name="Log" owner="BuiltIn">
-<msg time="2025-11-24T13:55:48.655795" level="INFO">Cart cleared successfully</msg>
+<msg time="2025-11-24T14:14:43.461390" level="INFO">Cart cleared successfully</msg>
 <arg>Cart cleared successfully</arg>
 <doc>Logs the given message with the given level.</doc>
-<status status="PASS" start="2025-11-24T13:55:48.655351" elapsed="0.001111" />
+<status status="PASS" start="2025-11-24T14:14:43.461390" elapsed="0.001000" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:55:48.658043" level="INFO">Clicking element 'id=continue-shopping'.</msg>
+<msg time="2025-11-24T14:14:43.463390" level="INFO">Clicking element 'id=continue-shopping'.</msg>
 <arg>id=continue-shopping</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:55:48.657594" elapsed="0.252063" />
+<status status="PASS" start="2025-11-24T14:14:43.463390" elapsed="0.272900" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:47.869338" elapsed="1.041423" />
+<status status="PASS" start="2025-11-24T14:14:42.677581" elapsed="1.059721" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:47.868915" elapsed="1.042889" />
+<status status="PASS" start="2025-11-24T14:14:42.676581" elapsed="1.061724" />
 </branch>
-<status status="PASS" start="2025-11-24T13:55:47.866046" elapsed="1.046726" />
+<status status="PASS" start="2025-11-24T14:14:42.671582" elapsed="1.067719" />
 </if>
 <arg>@{PRODUCTS_2}</arg>
-<status status="PASS" start="2025-11-24T13:55:47.323690" elapsed="1.589138" />
+<status status="PASS" start="2025-11-24T14:14:42.141725" elapsed="1.597576" />
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T13:55:49.914389" level="INFO">Slept 1 second.</msg>
+<msg time="2025-11-24T14:14:44.740686" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T13:55:48.913325" elapsed="1.001866" />
+<status status="PASS" start="2025-11-24T14:14:43.740300" elapsed="1.000386" />
 </kw>
 <kw name="Close Browser" owner="keywords">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-24T13:55:49.916353" elapsed="1.158118" />
+<status status="PASS" start="2025-11-24T14:14:44.742728" elapsed="1.216788" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:49.915785" elapsed="1.159796" />
+<status status="PASS" start="2025-11-24T14:14:44.741731" elapsed="1.219332" />
 </kw>
-<status status="PASS" start="2025-11-24T13:55:28.452455" elapsed="22.623663" />
+<status status="PASS" start="2025-11-24T14:14:21.040890" elapsed="24.921182" />
 </test>
-<status status="PASS" start="2025-11-24T13:55:28.409885" elapsed="22.667205" />
+<status status="PASS" start="2025-11-24T14:14:20.950945" elapsed="25.013127" />
 </suite>
-<status status="PASS" start="2025-11-24T13:55:28.409885" elapsed="22.667205" />
+<status status="PASS" start="2025-11-24T14:14:20.950945" elapsed="25.013127" />
 </suite><errors>
-<msg time="2025-11-24T13:55:28.525986" level="WARN">The chromedriver version (141.0.7390.78) detected in PATH at C:\Users\Acer\PycharmProjects\Testing\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (142.0.7444.176); currently, chromedriver 142.0.7444.175 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>

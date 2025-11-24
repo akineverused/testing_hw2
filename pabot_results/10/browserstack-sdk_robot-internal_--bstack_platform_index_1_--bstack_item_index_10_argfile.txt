@@ -1,14 +1,14 @@
 --suite testCases.Login Logout
 --variable BSTACKDEFLOCALIDENTIFIER:
 --variable BSTACKPLATFORMINDEX:1
---variable CALLER_ID:238c0cd744964ac78a485588091a67b5
+--variable CALLER_ID:064fbae1da45451682c93a03e54e746e
 --variable PABOTLIBURI:127.0.0.1:8270
---variable PABOTEXECUTIONPOOLID:2
+--variable PABOTEXECUTIONPOOLID:0
 --variable PABOTISLASTEXECUTIONINPOOL:0
 --variable PABOTNUMBEROFPROCESSES:3
 --variable PABOTQUEUEINDEX:10
 --variable PABOTLASTLEVEL:testCases.Login Logout.PABOT_noend
---listener C:\Users\Acer\PycharmProjects\Testing\Assignment_2\.venv\Lib\site-packages\browserstack_sdk\bstack_robot_listener.py
+--listener C:\Users\Acer\PycharmProjects\Testing\Assignment_2\.venv312\Lib\site-packages\browserstack_sdk\bstack_robot_listener.py
 --log NONE
 --report NONE
 --xunit NONE

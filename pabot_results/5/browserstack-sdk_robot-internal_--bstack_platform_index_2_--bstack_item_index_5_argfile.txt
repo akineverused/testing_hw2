@@ -1,14 +1,14 @@
 --suite testCases.BuyProducts
 --variable BSTACKDEFLOCALIDENTIFIER:
 --variable BSTACKPLATFORMINDEX:2
---variable CALLER_ID:e79d1773c75c48cea9f91eb4b5502297
+--variable CALLER_ID:4a5a27a9c748442e907677ebe4355e1f
 --variable PABOTLIBURI:127.0.0.1:8270
---variable PABOTEXECUTIONPOOLID:2
+--variable PABOTEXECUTIONPOOLID:0
 --variable PABOTISLASTEXECUTIONINPOOL:0
 --variable PABOTNUMBEROFPROCESSES:3
 --variable PABOTQUEUEINDEX:5
 --variable PABOTLASTLEVEL:testCases.BuyProducts
---listener C:\Users\Acer\PycharmProjects\Testing\Assignment_2\.venv\Lib\site-packages\browserstack_sdk\bstack_robot_listener.py
+--listener C:\Users\Acer\PycharmProjects\Testing\Assignment_2\.venv312\Lib\site-packages\browserstack_sdk\bstack_robot_listener.py
 --log NONE
 --report NONE
 --xunit NONE

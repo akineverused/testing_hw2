@@ -1,4 +1,4 @@
-<robot generator="Robot 7.3.2 (Python 3.13.5 on win32)" generated="2025-11-24T13:56:00.816565" rpa="false" schemaversion="5">
+<robot generator="Robot 7.3.2 (Python 3.12.0 on win32)" generated="2025-11-24T14:14:52.597660" rpa="false" schemaversion="5">
 <statistics>
 <total>
 <stat pass="1" fail="0" skip="0">All Tests</stat>
@@ -14,77 +14,75 @@
 <test id="s1-s1-t1" name="Login and Logout on SauceDemo" line="5">
 <kw name="Open Browser To SauceDemo" owner="keywords">
 <kw name="Open Browser" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:56:00.889241" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
-<msg time="2025-11-24T13:56:00.958955" level="WARN">The chromedriver version (141.0.7390.78) detected in PATH at C:\Users\Acer\PycharmProjects\Testing\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (142.0.7444.176); currently, chromedriver 142.0.7444.175 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
-<msg time="2025-11-24T13:56:00.962901" level="INFO">Completed setup!</msg>
+<msg time="2025-11-24T14:14:52.676601" level="INFO">Opening browser 'Chrome' to base url 'https://www.saucedemo.com/'.</msg>
+<msg time="2025-11-24T14:14:52.726324" level="INFO">Completed setup!</msg>
 <arg>${BASE_URL}</arg>
 <arg>${BROWSER}</arg>
 <doc>Opens a new browser instance to the optional ``url``.</doc>
-<status status="PASS" start="2025-11-24T13:56:00.888663" elapsed="12.831281" />
+<status status="PASS" start="2025-11-24T14:14:52.675596" elapsed="12.890970" />
 </kw>
 <kw name="Maximize Browser Window" owner="SeleniumLibrary">
 <doc>Maximizes current browser window.</doc>
-<status status="PASS" start="2025-11-24T13:56:13.721244" elapsed="0.132155" />
+<status status="PASS" start="2025-11-24T14:15:05.568526" elapsed="0.134340" />
 </kw>
-<status status="PASS" start="2025-11-24T13:56:00.887658" elapsed="12.966815" />
+<status status="PASS" start="2025-11-24T14:14:52.674625" elapsed="13.029284" />
 </kw>
 <kw name="Login" owner="keywords">
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:56:13.856227" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[@id="user-name"]'.</msg>
+<msg time="2025-11-24T14:15:05.705909" level="INFO">Typing text 'standard_user' into text field 'xpath=//input[@id="user-name"]'.</msg>
 <arg>xpath=//input[@id="user-name"]</arg>
 <arg>${USERNAME}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:56:13.855573" elapsed="0.386535" />
+<status status="PASS" start="2025-11-24T14:15:05.704907" elapsed="0.379203" />
 </kw>
 <kw name="Input Text" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:56:14.243788" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//input[@id="password"]'.</msg>
+<msg time="2025-11-24T14:15:06.086155" level="INFO">Typing text 'secret_sauce' into text field 'xpath=//input[@id="password"]'.</msg>
 <arg>xpath=//input[@id="password"]</arg>
 <arg>${PASSWORD}</arg>
 <doc>Types the given ``text`` into the text field identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:56:14.243248" elapsed="0.437019" />
+<status status="PASS" start="2025-11-24T14:15:06.085158" elapsed="0.405624" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:56:14.681887" level="INFO">Clicking element 'xpath=//input[@id="login-button"]'.</msg>
+<msg time="2025-11-24T14:15:06.492788" level="INFO">Clicking element 'xpath=//input[@id="login-button"]'.</msg>
 <arg>xpath=//input[@id="login-button"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:56:14.681385" elapsed="0.266641" />
+<status status="PASS" start="2025-11-24T14:15:06.491793" elapsed="0.264377" />
 </kw>
-<status status="PASS" start="2025-11-24T13:56:13.854998" elapsed="1.094214" />
+<status status="PASS" start="2025-11-24T14:15:05.704907" elapsed="1.053263" />
 </kw>
 <kw name="Logout" owner="keywords">
 <kw name="Click Button" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:56:14.950908" level="INFO">Clicking button 'xpath=//button[@id="react-burger-menu-btn"]'.</msg>
+<msg time="2025-11-24T14:15:06.762172" level="INFO">Clicking button 'xpath=//button[@id="react-burger-menu-btn"]'.</msg>
 <arg>xpath=//button[@id="react-burger-menu-btn"]</arg>
 <doc>Clicks the button identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:56:14.950402" elapsed="0.614671" />
+<status status="PASS" start="2025-11-24T14:15:06.761139" elapsed="0.620371" />
 </kw>
 <kw name="Sleep" owner="BuiltIn">
-<msg time="2025-11-24T13:56:16.567004" level="INFO">Slept 1 second.</msg>
+<msg time="2025-11-24T14:15:08.383732" level="INFO">Slept 1 second.</msg>
 <arg>1s</arg>
 <doc>Pauses the test executed for the given time.</doc>
-<status status="PASS" start="2025-11-24T13:56:15.566219" elapsed="1.001577" />
+<status status="PASS" start="2025-11-24T14:15:07.383506" elapsed="1.000226" />
 </kw>
 <kw name="Click Element" owner="SeleniumLibrary">
-<msg time="2025-11-24T13:56:16.569604" level="INFO">Clicking element 'xpath=//a[text()="Logout"]'.</msg>
+<msg time="2025-11-24T14:15:08.385273" level="INFO">Clicking element 'xpath=//a[text()="Logout"]'.</msg>
 <arg>xpath=//a[text()="Logout"]</arg>
 <doc>Click the element identified by ``locator``.</doc>
-<status status="PASS" start="2025-11-24T13:56:16.568922" elapsed="0.256099" />
+<status status="PASS" start="2025-11-24T14:15:08.385273" elapsed="0.261814" />
 </kw>
-<status status="PASS" start="2025-11-24T13:56:14.949791" elapsed="1.876476" />
+<status status="PASS" start="2025-11-24T14:15:06.760178" elapsed="1.887919" />
 </kw>
 <kw name="Close Browser" owner="keywords">
 <kw name="Close All Browsers" owner="SeleniumLibrary">
 <doc>Closes all open browsers and resets the browser cache.</doc>
-<status status="PASS" start="2025-11-24T13:56:16.827485" elapsed="1.348295" />
+<status status="PASS" start="2025-11-24T14:15:08.649092" elapsed="1.162518" />
 </kw>
-<status status="PASS" start="2025-11-24T13:56:16.826820" elapsed="1.350224" />
+<status status="PASS" start="2025-11-24T14:15:08.649092" elapsed="1.163546" />
 </kw>
-<status status="PASS" start="2025-11-24T13:56:00.885680" elapsed="17.291931" />
+<status status="PASS" start="2025-11-24T14:14:52.671037" elapsed="17.141601" />
 </test>
-<status status="PASS" start="2025-11-24T13:56:00.843288" elapsed="17.335385" />
+<status status="PASS" start="2025-11-24T14:14:52.624930" elapsed="17.188709" />
 </suite>
-<status status="PASS" start="2025-11-24T13:56:00.843288" elapsed="17.335385" />
+<status status="PASS" start="2025-11-24T14:14:52.624930" elapsed="17.188709" />
 </suite><errors>
-<msg time="2025-11-24T13:56:00.958955" level="WARN">The chromedriver version (141.0.7390.78) detected in PATH at C:\Users\Acer\PycharmProjects\Testing\chromedriver-win64\chromedriver.exe might not be compatible with the detected chrome version (142.0.7444.176); currently, chromedriver 142.0.7444.175 is recommended for chrome 142.*, so it is advised to delete the driver in PATH and retry</msg>
 </errors>
 </robot>
